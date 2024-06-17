@@ -1,0 +1,4 @@
+org/example/web_flux_jdbc/WebFluxJdbcApplication.class
+org/example/web_flux_jdbc/StudentController.class
+org/example/web_flux_jdbc/StudentRepository.class
+org/example/web_flux_jdbc/Student.class

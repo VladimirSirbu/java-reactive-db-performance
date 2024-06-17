@@ -1,0 +1,4 @@
+org/example/web_flux_r2dbc/WebFluxR2DbcApplication.class
+org/example/web_flux_r2dbc/Student.class
+org/example/web_flux_r2dbc/StudentController.class
+org/example/web_flux_r2dbc/StudentRepository.class

@@ -1,0 +1,4 @@
+org/example/web_mvc_jdbc/StudentRepository.class
+org/example/web_mvc_jdbc/Student.class
+org/example/web_mvc_jdbc/StudentController.class
+org/example/web_mvc_jdbc/WebMvcJdbcApplication.class
