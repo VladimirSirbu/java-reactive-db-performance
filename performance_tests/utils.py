@@ -1,5 +1,5 @@
 from config import wait_to_start, wait_after_kill, test_duration, primer_duration, wait_after_primer
-from config import javacmd, wrkcmd, wrktimeout, test_URL
+from config import javacmd, wrkcmd, wrktimeout, test_URL_router_function
 from config import logger
 from config import jarfiles
 from config import concurrency_levels
@@ -168,7 +168,7 @@ def start_java_process(java_cmd, cpuset):
 
 def execute_test_single(cpuset, threads, concurrency, duration):
     logger.info('Executing test with concurrency: ' + str(concurrency) + ', Duration: ' + str(duration) + ', Threads: ' + str(threads))
-    cmd = 'taskset -c ' + str(cpuset) + ' ' + wrkcmd + ' --timeout ' + wrktimeout + ' -d' + str(duration) + 's -c' + str(concurrency) + ' -t' + str(threads) + ' ' + test_URL
+    cmd = 'taskset -c ' + str(cpuset) + ' ' + wrkcmd + ' --timeout ' + wrktimeout + ' -d' + str(duration) + 's -c' + str(concurrency) + ' -t' + str(threads) + ' ' + test_URL_router_function
     process = subprocess.run(cmd.split(' '), check=True, stdout=subprocess.PIPE, universal_newlines=True)
     output = process.stdout
     logger.debug('Executing test command ' + cmd)

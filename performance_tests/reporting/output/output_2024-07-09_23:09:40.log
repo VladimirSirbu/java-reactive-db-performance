@@ -1,0 +1,207 @@
+2024-07-09 23:09:40,946 - start-perf-test - INFO - Requirements satisfied
+2024-07-09 23:09:40,946 - start-perf-test - INFO - The estimated duration of the performance tests is: 0.20277777777777778 hours
+2024-07-09 23:09:40,946 - start-perf-test - INFO - The results will be saved in the logfile: reporting/results/results_2024-07-09_23:09:40.log
+2024-07-09 23:09:40,947 - start-perf-test - INFO - Processing command: /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:09:40,947 - start-perf-test - INFO - Number of CPUs allocated for load generation: 2
+2024-07-09 23:09:40,947 - start-perf-test - INFO - Number of CPUs allocated for service: 2
+2024-07-09 23:09:40,947 - start-perf-test - INFO - Number of concurrent requests: 10
+2024-07-09 23:09:50,958 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:09:50,965 - start-perf-test - INFO - Java process PID is: 663
+2024-07-09 23:09:50,965 - start-perf-test - INFO - Executing test with Concurrency: 10, Duration: 2, Threads: 2
+2024-07-09 23:09:52,980 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c10 -t2 http://localhost:8080/students/
+2024-07-09 23:09:52,980 - start-perf-test - INFO - Executing test done
+2024-07-09 23:09:53,986 - start-perf-test - INFO - Executing test with Concurrency: 10, Duration: 60, Threads: 2
+2024-07-09 23:10:54,071 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c10 -t2 http://localhost:8080/students/
+2024-07-09 23:10:54,071 - start-perf-test - INFO - Executing test done
+2024-07-09 23:10:54,075 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:10:54,076 - start-perf-test - DEBUG - wrk output:   2 threads and 10 connections
+2024-07-09 23:10:54,077 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:10:54,077 - start-perf-test - DEBUG - wrk output:     Latency     5.09ms    7.44ms 112.10ms   90.81%
+2024-07-09 23:10:54,077 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.54k   701.15     2.39k    71.50%
+2024-07-09 23:10:54,077 - start-perf-test - DEBUG - wrk output:   183794 requests in 1.00m, 48.24MB read
+2024-07-09 23:10:54,077 - start-perf-test - DEBUG - wrk output: Requests/sec:   3059.13
+2024-07-09 23:10:54,078 - start-perf-test - DEBUG - wrk output: Transfer/sec:    822.12KB
+2024-07-09 23:10:54,078 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 5.09, 'lat_stdev': 7.44, 'lat_max': 112.1, 'req_avg': 1540.0, 'req_stdev': 701.15, 'req_max': 2390.0, 'tot_requests': 183794.0, 'tot_duration': 60000.0, 'read': 50583306.24, 'req_sec_tot': 3059.13, 'read_tot': 841850.88, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:10:54,096 - start-perf-test - INFO - CPU and memory: ,5889,3450,1562340,1563002,1565860
+2024-07-09 23:10:54,096 - start-perf-test - INFO - Killing process with PID: 663
+2024-07-09 23:10:54,109 - start-perf-test - INFO - Number of concurrent requests: 20
+2024-07-09 23:11:04,112 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:11:04,117 - start-perf-test - INFO - Java process PID is: 185252
+2024-07-09 23:11:04,117 - start-perf-test - INFO - Executing test with Concurrency: 20, Duration: 2, Threads: 2
+2024-07-09 23:11:06,128 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c20 -t2 http://localhost:8080/students/
+2024-07-09 23:11:06,128 - start-perf-test - INFO - Executing test done
+2024-07-09 23:11:07,134 - start-perf-test - INFO - Executing test with Concurrency: 20, Duration: 60, Threads: 2
+2024-07-09 23:12:07,170 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c20 -t2 http://localhost:8080/students/
+2024-07-09 23:12:07,170 - start-perf-test - INFO - Executing test done
+2024-07-09 23:12:07,174 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:12:07,174 - start-perf-test - DEBUG - wrk output:   2 threads and 20 connections
+2024-07-09 23:12:07,174 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:12:07,174 - start-perf-test - DEBUG - wrk output:     Latency     9.06ms   11.99ms 279.87ms   91.35%
+2024-07-09 23:12:07,175 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.55k   608.37     2.17k    80.83%
+2024-07-09 23:12:07,175 - start-perf-test - DEBUG - wrk output:   184842 requests in 1.00m, 48.51MB read
+2024-07-09 23:12:07,175 - start-perf-test - DEBUG - wrk output: Requests/sec:   3079.18
+2024-07-09 23:12:07,175 - start-perf-test - DEBUG - wrk output: Transfer/sec:    827.50KB
+2024-07-09 23:12:07,175 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 9.06, 'lat_stdev': 11.99, 'lat_max': 279.87, 'req_avg': 1550.0, 'req_stdev': 608.37, 'req_max': 2170.0, 'tot_requests': 184842.0, 'tot_duration': 60000.0, 'read': 50866421.76, 'req_sec_tot': 3079.18, 'read_tot': 847360.0, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:12:07,195 - start-perf-test - INFO - CPU and memory: ,6078,3356,1572276,1572934,1575796
+2024-07-09 23:12:07,195 - start-perf-test - INFO - Killing process with PID: 185252
+2024-07-09 23:12:07,211 - start-perf-test - INFO - Number of concurrent requests: 30
+2024-07-09 23:12:17,219 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:12:17,224 - start-perf-test - INFO - Java process PID is: 370884
+2024-07-09 23:12:17,224 - start-perf-test - INFO - Executing test with Concurrency: 30, Duration: 2, Threads: 2
+2024-07-09 23:12:19,235 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c30 -t2 http://localhost:8080/students/
+2024-07-09 23:12:19,235 - start-perf-test - INFO - Executing test done
+2024-07-09 23:12:20,240 - start-perf-test - INFO - Executing test with Concurrency: 30, Duration: 60, Threads: 2
+2024-07-09 23:13:20,307 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c30 -t2 http://localhost:8080/students/
+2024-07-09 23:13:20,307 - start-perf-test - INFO - Executing test done
+2024-07-09 23:13:20,311 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:13:20,311 - start-perf-test - DEBUG - wrk output:   2 threads and 30 connections
+2024-07-09 23:13:20,311 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:13:20,311 - start-perf-test - DEBUG - wrk output:     Latency    17.58ms   41.93ms 919.32ms   96.23%
+2024-07-09 23:13:20,311 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.37k   592.81     2.16k    71.42%
+2024-07-09 23:13:20,312 - start-perf-test - DEBUG - wrk output:   163637 requests in 1.00m, 42.94MB read
+2024-07-09 23:13:20,312 - start-perf-test - DEBUG - wrk output: Requests/sec:   2724.61
+2024-07-09 23:13:20,312 - start-perf-test - DEBUG - wrk output: Transfer/sec:    732.21KB
+2024-07-09 23:13:20,312 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 17.58, 'lat_stdev': 41.93, 'lat_max': 919.32, 'req_avg': 1370.0, 'req_stdev': 592.81, 'req_max': 2160.0, 'tot_requests': 163637.0, 'tot_duration': 60000.0, 'read': 45025853.44, 'req_sec_tot': 2724.61, 'read_tot': 749783.04, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:13:20,334 - start-perf-test - INFO - CPU and memory: ,5961,3385,1570924,1571600,1574608
+2024-07-09 23:13:20,334 - start-perf-test - INFO - Killing process with PID: 370884
+2024-07-09 23:13:20,348 - start-perf-test - INFO - Number of concurrent requests: 40
+2024-07-09 23:13:30,360 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:13:30,365 - start-perf-test - INFO - Java process PID is: 535336
+2024-07-09 23:13:30,365 - start-perf-test - INFO - Executing test with Concurrency: 40, Duration: 2, Threads: 2
+2024-07-09 23:13:32,378 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c40 -t2 http://localhost:8080/students/
+2024-07-09 23:13:32,379 - start-perf-test - INFO - Executing test done
+2024-07-09 23:13:33,384 - start-perf-test - INFO - Executing test with Concurrency: 40, Duration: 60, Threads: 2
+2024-07-09 23:14:33,413 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c40 -t2 http://localhost:8080/students/
+2024-07-09 23:14:33,414 - start-perf-test - INFO - Executing test done
+2024-07-09 23:14:33,417 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:14:33,417 - start-perf-test - DEBUG - wrk output:   2 threads and 40 connections
+2024-07-09 23:14:33,417 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk output:     Latency    18.98ms   61.94ms   1.60s    98.68%
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.64k   561.94     2.32k    81.17%
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk output:   195908 requests in 1.00m, 51.41MB read
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk output: Requests/sec:   3264.06
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk output: Transfer/sec:      0.86MB
+2024-07-09 23:14:33,418 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 18.98, 'lat_stdev': 61.94, 'lat_max': 1600.0, 'req_avg': 1640.0, 'req_stdev': 561.94, 'req_max': 2320.0, 'tot_requests': 195908.0, 'tot_duration': 60000.0, 'read': 53907292.16, 'req_sec_tot': 3264.06, 'read_tot': 901775.36, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:14:33,443 - start-perf-test - INFO - CPU and memory: ,6225,3352,1583732,1584001,1586860
+2024-07-09 23:14:33,443 - start-perf-test - INFO - Killing process with PID: 535336
+2024-07-09 23:14:33,457 - start-perf-test - INFO - Number of concurrent requests: 50
+2024-07-09 23:14:43,468 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:14:43,473 - start-perf-test - INFO - Java process PID is: 732235
+2024-07-09 23:14:43,474 - start-perf-test - INFO - Executing test with Concurrency: 50, Duration: 2, Threads: 2
+2024-07-09 23:14:45,486 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c50 -t2 http://localhost:8080/students/
+2024-07-09 23:14:45,486 - start-perf-test - INFO - Executing test done
+2024-07-09 23:14:46,492 - start-perf-test - INFO - Executing test with Concurrency: 50, Duration: 60, Threads: 2
+2024-07-09 23:15:46,531 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c50 -t2 http://localhost:8080/students/
+2024-07-09 23:15:46,531 - start-perf-test - INFO - Executing test done
+2024-07-09 23:15:46,535 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output:   2 threads and 50 connections
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output:     Latency    29.20ms  112.14ms   2.01s    98.20%
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.77k   608.86     2.39k    84.00%
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output:   211364 requests in 1.00m, 55.47MB read
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output: Requests/sec:   3521.08
+2024-07-09 23:15:46,536 - start-perf-test - DEBUG - wrk output: Transfer/sec:      0.92MB
+2024-07-09 23:15:46,537 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 29.2, 'lat_stdev': 112.14, 'lat_max': 2009.9999999999998, 'req_avg': 1770.0, 'req_stdev': 608.86, 'req_max': 2390.0, 'tot_requests': 211364.0, 'tot_duration': 60000.0, 'read': 58164510.72, 'req_sec_tot': 3521.08, 'read_tot': 964689.92, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:15:46,559 - start-perf-test - INFO - CPU and memory: ,5922,3458,1566440,1566788,1569832
+2024-07-09 23:15:46,560 - start-perf-test - INFO - Killing process with PID: 732235
+2024-07-09 23:15:46,575 - start-perf-test - INFO - Number of concurrent requests: 60
+2024-07-09 23:15:56,587 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:15:56,591 - start-perf-test - INFO - Java process PID is: 944619
+2024-07-09 23:15:56,592 - start-perf-test - INFO - Executing test with Concurrency: 60, Duration: 2, Threads: 2
+2024-07-09 23:15:58,657 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c60 -t2 http://localhost:8080/students/
+2024-07-09 23:15:58,657 - start-perf-test - INFO - Executing test done
+2024-07-09 23:15:59,663 - start-perf-test - INFO - Executing test with Concurrency: 60, Duration: 60, Threads: 2
+2024-07-09 23:16:59,751 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c60 -t2 http://localhost:8080/students/
+2024-07-09 23:16:59,752 - start-perf-test - INFO - Executing test done
+2024-07-09 23:16:59,755 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:16:59,755 - start-perf-test - DEBUG - wrk output:   2 threads and 60 connections
+2024-07-09 23:16:59,755 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk output:     Latency    47.99ms  213.77ms   4.02s    97.79%
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.71k   590.48     2.57k    84.25%
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk output:   204482 requests in 1.00m, 53.66MB read
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk output: Requests/sec:   3404.04
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk output: Transfer/sec:      0.89MB
+2024-07-09 23:16:59,756 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 47.99, 'lat_stdev': 213.77, 'lat_max': 4019.9999999999995, 'req_avg': 1710.0, 'req_stdev': 590.48, 'req_max': 2570.0, 'tot_requests': 204482.0, 'tot_duration': 60000.0, 'read': 56266588.16, 'req_sec_tot': 3404.04, 'read_tot': 933232.64, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:16:59,780 - start-perf-test - INFO - CPU and memory: ,6029,3381,1588916,1589579,1592456
+2024-07-09 23:16:59,780 - start-perf-test - INFO - Killing process with PID: 944619
+2024-07-09 23:16:59,795 - start-perf-test - INFO - Number of concurrent requests: 70
+2024-07-09 23:17:09,807 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:17:09,812 - start-perf-test - INFO - Java process PID is: 1150144
+2024-07-09 23:17:09,812 - start-perf-test - INFO - Executing test with Concurrency: 70, Duration: 2, Threads: 2
+2024-07-09 23:17:11,872 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c70 -t2 http://localhost:8080/students/
+2024-07-09 23:17:11,872 - start-perf-test - INFO - Executing test done
+2024-07-09 23:17:12,878 - start-perf-test - INFO - Executing test with Concurrency: 70, Duration: 60, Threads: 2
+2024-07-09 23:18:12,976 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c70 -t2 http://localhost:8080/students/
+2024-07-09 23:18:12,976 - start-perf-test - INFO - Executing test done
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output:   2 threads and 70 connections
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output:     Latency    41.64ms  112.08ms   3.07s    96.37%
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.47k   686.10     2.28k    72.91%
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output:   174539 requests in 1.00m, 45.81MB read
+2024-07-09 23:18:12,987 - start-perf-test - DEBUG - wrk output: Requests/sec:   2908.20
+2024-07-09 23:18:12,988 - start-perf-test - DEBUG - wrk output: Transfer/sec:    781.54KB
+2024-07-09 23:18:12,988 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 41.64, 'lat_stdev': 112.08, 'lat_max': 3070.0, 'req_avg': 1470.0, 'req_stdev': 686.1, 'req_max': 2280.0, 'tot_requests': 174539.0, 'tot_duration': 60000.0, 'read': 48035266.56, 'req_sec_tot': 2908.2, 'read_tot': 800296.96, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:18:13,023 - start-perf-test - INFO - CPU and memory: ,5942,3316,1597272,1597919,1600800
+2024-07-09 23:18:13,023 - start-perf-test - INFO - Killing process with PID: 1150144
+2024-07-09 23:18:13,050 - start-perf-test - INFO - Number of concurrent requests: 80
+2024-07-09 23:18:23,061 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:18:23,067 - start-perf-test - INFO - Java process PID is: 1325663
+2024-07-09 23:18:23,067 - start-perf-test - INFO - Executing test with Concurrency: 80, Duration: 2, Threads: 2
+2024-07-09 23:18:25,156 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c80 -t2 http://localhost:8080/students/
+2024-07-09 23:18:25,157 - start-perf-test - INFO - Executing test done
+2024-07-09 23:18:26,163 - start-perf-test - INFO - Executing test with Concurrency: 80, Duration: 60, Threads: 2
+2024-07-09 23:19:26,281 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c80 -t2 http://localhost:8080/students/
+2024-07-09 23:19:26,281 - start-perf-test - INFO - Executing test done
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output:   2 threads and 80 connections
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output:     Latency   117.23ms  355.21ms   5.19s    96.87%
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output:     Req/Sec   764.43    379.18     1.35k    66.69%
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output:   91359 requests in 1.00m, 23.98MB read
+2024-07-09 23:19:26,286 - start-perf-test - DEBUG - wrk output: Requests/sec:   1520.61
+2024-07-09 23:19:26,287 - start-perf-test - DEBUG - wrk output: Transfer/sec:    408.64KB
+2024-07-09 23:19:26,287 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 117.23, 'lat_stdev': 355.21, 'lat_max': 5190.0, 'req_avg': 764.43, 'req_stdev': 379.18, 'req_max': 1350.0, 'tot_requests': 91359.0, 'tot_duration': 60000.0, 'read': 25144852.48, 'req_sec_tot': 1520.61, 'read_tot': 418447.36, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:19:26,336 - start-perf-test - INFO - CPU and memory: ,6183,2952,1579108,1579364,1581648
+2024-07-09 23:19:26,336 - start-perf-test - INFO - Killing process with PID: 1325663
+2024-07-09 23:19:26,360 - start-perf-test - INFO - Number of concurrent requests: 90
+2024-07-09 23:19:36,369 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:19:36,373 - start-perf-test - INFO - Java process PID is: 1417913
+2024-07-09 23:19:36,374 - start-perf-test - INFO - Executing test with Concurrency: 90, Duration: 2, Threads: 2
+2024-07-09 23:19:38,421 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c90 -t2 http://localhost:8080/students/
+2024-07-09 23:19:38,421 - start-perf-test - INFO - Executing test done
+2024-07-09 23:19:39,427 - start-perf-test - INFO - Executing test with Concurrency: 90, Duration: 60, Threads: 2
+2024-07-09 23:20:39,556 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c90 -t2 http://localhost:8080/students/
+2024-07-09 23:20:39,557 - start-perf-test - INFO - Executing test done
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output:   2 threads and 90 connections
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output:     Latency   105.31ms  492.73ms   6.87s    97.35%
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.64k   614.90     2.36k    82.50%
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output:   196374 requests in 1.00m, 51.54MB read
+2024-07-09 23:20:39,561 - start-perf-test - DEBUG - wrk output: Requests/sec:   3267.51
+2024-07-09 23:20:39,562 - start-perf-test - DEBUG - wrk output: Transfer/sec:      0.86MB
+2024-07-09 23:20:39,562 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 105.31, 'lat_stdev': 492.73, 'lat_max': 6870.0, 'req_avg': 1640.0, 'req_stdev': 614.9, 'req_max': 2360.0, 'tot_requests': 196374.0, 'tot_duration': 60000.0, 'read': 54043607.04, 'req_sec_tot': 3267.51, 'read_tot': 901775.36, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:20:39,586 - start-perf-test - INFO - CPU and memory: ,6056,3227,1588668,1589363,1592416
+2024-07-09 23:20:39,586 - start-perf-test - INFO - Killing process with PID: 1417913
+2024-07-09 23:20:39,602 - start-perf-test - INFO - Number of concurrent requests: 100
+2024-07-09 23:20:49,609 - start-perf-test - INFO - Executing command: taskset -c 2,4 /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g -jar jars/sb_mvc_rest_controller-SNAPSHOT.jar
+2024-07-09 23:20:49,614 - start-perf-test - INFO - Java process PID is: 1615228
+2024-07-09 23:20:49,614 - start-perf-test - INFO - Executing test with Concurrency: 100, Duration: 2, Threads: 2
+2024-07-09 23:20:51,692 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d2s -c100 -t2 http://localhost:8080/students/
+2024-07-09 23:20:51,692 - start-perf-test - INFO - Executing test done
+2024-07-09 23:20:52,698 - start-perf-test - INFO - Executing test with Concurrency: 100, Duration: 60, Threads: 2
+2024-07-09 23:21:52,792 - start-perf-test - DEBUG - Executing test command: taskset -c 3,5 wrk --timeout 20s -d60s -c100 -t2 http://localhost:8080/students/
+2024-07-09 23:21:52,792 - start-perf-test - INFO - Executing test done
+2024-07-09 23:21:52,796 - start-perf-test - DEBUG - wrk output: Running 1m test @ http://localhost:8080/students/
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output:   2 threads and 100 connections
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output:   Thread Stats   Avg      Stdev     Max   +/- Stdev
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output:     Latency    61.34ms  196.26ms   2.78s    97.42%
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output:     Req/Sec     1.70k   581.43     2.38k    84.67%
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output:   203342 requests in 1.00m, 53.36MB read
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output: Requests/sec:   3384.59
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk output: Transfer/sec:      0.89MB
+2024-07-09 23:21:52,797 - start-perf-test - DEBUG - wrk_output: {'lat_avg': 61.34, 'lat_stdev': 196.26, 'lat_max': 2780.0, 'req_avg': 1700.0, 'req_stdev': 581.43, 'req_max': 2380.0, 'tot_requests': 203342.0, 'tot_duration': 60000.0, 'read': 55952015.36, 'req_sec_tot': 3384.59, 'read_tot': 933232.64, 'err_connect': 0, 'err_read': 0, 'err_write': 0, 'err_timeout': 0}
+2024-07-09 23:21:52,834 - start-perf-test - INFO - CPU and memory: ,6051,3327,1592748,1592389,1594440
+2024-07-09 23:21:52,835 - start-perf-test - INFO - Killing process with PID: 1615228
+2024-07-09 23:21:52,853 - start-perf-test - INFO - Test execution finished

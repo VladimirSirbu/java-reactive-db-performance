@@ -43,29 +43,39 @@ concurrency_levels = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100
 ##########################################################################################################
 
 # JARs path
-jarfiles = [     {'filename': 'jars/WEB_MVC_JDBC-0.0.1-SNAPSHOT.jar',
-                  'description': 'Web MVC JDBC',
+# jarfiles = [     {'filename': 'jars/WEB_MVC_JDBC-0.0.1-SNAPSHOT.jar',
+#                   'description': 'Web MVC JDBC',
+#                   'asyncservice': 'no',
+#                   'asyncdriver': 'no'},
+#                  {'filename': 'jars/WEB_FLUX_R2DBC-0.0.1-SNAPSHOT.jar',
+#                   'description': 'WebFlux R2DBC',
+#                   'asyncservice': 'yes',
+#                   'asyncdriver': 'yes'},
+#                  {'filename': 'jars/WEB_MVC_R2DBC-0.0.1-SNAPSHOT.jar',
+#                   'description': 'Web MVC R2DBC',
+#                   'asyncservice': 'no',
+#                   'asyncdriver': 'yes'},
+#                  {'filename': 'jars/WEB_FLUX_JDBC-0.0.1-SNAPSHOT.jar',
+#                   'description': 'WebFlux JDBC',
+#                   'asyncservice': 'yes',
+#                   'asyncdriver': 'no'},
+#                  {'filename': 'jars/quarkus-r2dbc-1.0.0-SNAPSHOT-runner.jar',
+#                   'description': 'Quarkus_R2DBC',
+#                   'asyncservice': 'yes',
+#                   'asyncdriver': 'yes'},
+#                  {'filename': 'jars/VertX_PG_client-1.0.0-SNAPSHOT-fat.jar',
+#                   'description': 'VertX_PG_client',
+#                   'asyncservice': 'yes',
+#                   'asyncdriver': 'yes'}]
+
+# jarfiles = [  {'filename': 'jars/sb_mvc_rest_controller-SNAPSHOT.jar',
+#                   'description': 'Spring Web MVC with Rest Controller',
+#                   'asyncservice': 'no',
+#                   'asyncdriver': 'no'}]
+
+jarfiles = [  {'filename': 'jars/sb_mvc_router_function-SNAPSHOT.jar',
+                  'description': 'Spring Web MVC with Router Function',
                   'asyncservice': 'no',
-                  'asyncdriver': 'no'},
-                 {'filename': 'jars/WEB_FLUX_R2DBC-0.0.1-SNAPSHOT.jar',
-                  'description': 'WebFlux R2DBC',
-                  'asyncservice': 'yes',
-                  'asyncdriver': 'yes'},
-                 {'filename': 'jars/WEB_MVC_R2DBC-0.0.1-SNAPSHOT.jar',
-                  'description': 'Web MVC R2DBC',
-                  'asyncservice': 'no',
-                  'asyncdriver': 'yes'},
-                 {'filename': 'jars/WEB_FLUX_JDBC-0.0.1-SNAPSHOT.jar',
-                  'description': 'WebFlux JDBC',
-                  'asyncservice': 'yes',
-                  'asyncdriver': 'no'},
-                 {'filename': 'jars/quarkus-r2dbc-1.0.0-SNAPSHOT-runner.jar',
-                  'description': 'Quarkus_R2DBC',
-                  'asyncservice': 'yes',
-                  'asyncdriver': 'yes'},
-                 {'filename': 'jars/VertX_PG_client-1.0.0-SNAPSHOT-fat.jar',
-                  'description': 'VertX_PG_client',
-                  'asyncservice': 'yes',
                   'asyncdriver': 'yes'}]
 
 ##########################################################################################################
@@ -78,9 +88,10 @@ wait_to_start = 10  # Wait time before starting the test in seconds
 wait_after_kill = 2  # Wait time after killing a process in seconds
 
 # Command configurations
-javacmd = '/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Xmx2g -Xms2g'
+javacmd = '/usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xmx2g -Xms2g'
 wrkcmd = 'wrk'
 wrktimeout = '20s'
 
 # URL on which requests will be made
-test_URL = 'http://localhost:8080/student/all'
+test_URL_rest_controller = 'http://localhost:8080/students/'
+test_URL_router_function = 'http://localhost:8080/product'

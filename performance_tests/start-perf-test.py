@@ -4,7 +4,7 @@ from config import load_generator_cpuset, service_cpuset
 from config import concurrency_levels
 from config import jarfiles
 from config import test_duration, primer_duration, wait_after_primer, wait_to_start, wrktimeout
-from config import wrkcmd, test_URL
+from config import wrkcmd, test_URL_router_function
 import utils as u
 import subprocess
 import time
@@ -33,7 +33,7 @@ def start_perf_tests():
             logger.info(f'Number of concurrent requests: {concurrency}')
 
             pid = u.start_java_process(jvmcmd, cpuset_service)
-            logger.info(f'Java process PID is: {pid}')
+            logger.info('Java process PID is: ' + pid)
 
             try:
                 output_primer = execute_test_single(cpuset_load, cpunum_load, concurrency, primer_duration)
@@ -63,7 +63,7 @@ def start_perf_tests():
 
 def execute_test_single(cpuset, threads, concurrency, duration):
     logger.info('Executing test with Concurrency: ' + str(concurrency) + ', Duration: ' + str(duration) + ', Threads: ' + str(threads))
-    cmd = 'taskset -c ' + str(cpuset) + ' ' + wrkcmd + ' --timeout ' + wrktimeout + ' -d' + str(duration) + 's -c' + str(concurrency) + ' -t' + str(threads) + ' ' + test_URL
+    cmd = 'taskset -c ' + str(cpuset) + ' ' + wrkcmd + ' --timeout ' + wrktimeout + ' -d' + str(duration) + 's -c' + str(concurrency) + ' -t' + str(threads) + ' ' + test_URL_router_function
     process = subprocess.run(cmd.split(' '), check=True, stdout=subprocess.PIPE, universal_newlines=True)
     output = process.stdout
     logger.debug('Executing test command: ' + cmd)
